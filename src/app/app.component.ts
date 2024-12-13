@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title:string='Hola mundo bebé'
+
+  public counter: number =10;
+
+  incrementaClick():void{
+    this.counter++;
+  }
+
+  decrementaClick():void{
+    this.counter--;
+  }
+
+  resetClick():void{
+    this.counter=10;
+  }
+
+
 }
+
