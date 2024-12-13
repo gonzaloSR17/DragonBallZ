@@ -1,0 +1,27 @@
+<!-- Realizacion del formulario-->
+<h4>Añade un personaje de dragon ball</h4>
+
+<!-- (ngSubmit) "Atributo de angular donde al darle al boton enviar se ejecuta la funcion"-->
+ <form class="row" (ngSubmit)="anadirPersonaje()">
+
+  <!-- Funcion Elementos del formulario donde llamamos a los datos de la interfaz -->
+      
+  <input type="text"
+  [(ngModel)]="newPersonaje.name" 
+  name="name"
+  class="form-control mb-2"
+  placeholder="Nombre"> <!-- Introduce un  texto de fondo, NgModel siguel la variable del objeto --> 
+
+  <input type="number"
+  [(ngModel)]="newPersonaje.power"
+  name="power"
+  class="form-control mb-2"
+  placeholder="placeholder">
+
+  <!-- Boton para cuando demos click ejecute la funcion emitCharacter -->
+
+  <button type="submit" class="btn btn-primary" (click)="anadirPersonaje()">
+  Agregar
+</button>
+
+ </form>
